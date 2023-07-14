@@ -1,3 +1,4 @@
+package com.epam.conditions.SeasonDeterminer;
 public class SeasonDeterminer {
     public void tellTheSeason(int monthNumber){
         switch (monthNumber) {
