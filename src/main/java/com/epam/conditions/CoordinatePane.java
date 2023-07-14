@@ -1,4 +1,7 @@
+package com.epam.conditions;
+
 public class CoordinatePane {
+
     public void printQuadrant(int x, int y) {
         String pane;
         if (x == 0 | y == 0)
@@ -8,12 +11,14 @@ public class CoordinatePane {
             if (y > 0)
                 pane = "first";
             else
-                pane = "second";
+                pane = "fourth";
         else
-            if (y > 0)
-                pane = "third";
-            else
-                pane = "fourth"  ;
-        System.out.print(pane);
+        if (y > 0)
+            pane = "second";
+        else
+            pane = "third"  ;
+        System.out.println(pane);
     }
+
 }
+

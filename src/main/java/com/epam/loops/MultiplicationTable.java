@@ -1,11 +1,12 @@
+package com.epam.loops;
+
 public class MultiplicationTable {
+
     public void printTable(int numberTableToPrint) {
         int num = numberTableToPrint;
-        for (int i = 1; i <= 9; i++) {
-            System.out.print(num + " x " + i + " = " + num * i + "\n");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i + " x " + num + " = " + num * i);
         }
     }
-    public static void main(String[] args) {
-        new MultiplicationTable().printTable(3);
-    }
+
 }

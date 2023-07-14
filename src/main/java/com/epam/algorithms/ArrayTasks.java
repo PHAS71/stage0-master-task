@@ -11,7 +11,7 @@ public class ArrayTasks {
      * Return a String[] array that will list all the seasons of the year, starting with winter.
      */
     public String[] seasonsArray() {
-        return null;
+        return new String[] {"winter", "spring", "summer", "autumn"};
     }
 
     /**
@@ -23,7 +23,11 @@ public class ArrayTasks {
      * length = 1  -> [1] length = 3  -> [1, 2, 3] length = 5  -> [1, 2, 3, 4, 5]
      */
     public int[] generateNumbers(int length) {
-        return null;
+        int[] array = new int[length];
+        for (int i = 0; i < length; i++) {
+            array[i] = i + 1;
+        }
+        return array;
     }
 
     /**
@@ -34,7 +38,11 @@ public class ArrayTasks {
      * arr = [1, 3, 5]   -> sum = 9 arr = [5, -3, -4] -> sum = -2
      */
     public int totalSum(int[] arr) {
-        return 0;
+        int sum = 0;
+        for (int a : arr) {
+            sum += a;
+        }
+        return sum;
     }
 
     /**
@@ -46,7 +54,11 @@ public class ArrayTasks {
      * arr = [99, -7, 102], number = -7    ->   2 arr = [5, -3, -4],   number = 10    ->  -1
      */
     public int findIndexOfNumber(int[] arr, int number) {
-        return 0;
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] == number)
+                return i;
+        }
+        return -1;
     }
 
     /**
@@ -58,7 +70,12 @@ public class ArrayTasks {
      * "pineapple"]
      */
     public String[] reverseArray(String[] arr) {
-        return null;
+        int n = arr.length;
+        String[] reversed = new String[n];
+        for (int i = 0; i < n; i++) {
+            reversed[i] = arr[n-1-i];
+        }
+        return reversed;
     }
 
     /**
@@ -70,7 +87,16 @@ public class ArrayTasks {
      * arr = [1,-2, 3]      -> [1, 3] arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
      */
     public int[] getOnlyPositiveNumbers(int[] arr) {
-        return null;
+        int[] positiveOnly = new int[0];
+        for(int a : arr) {
+            if(a > 0) {
+                int[] positiveOnly_new = new int[positiveOnly.length + 1];
+                System.arraycopy(positiveOnly, 0, positiveOnly_new, 0, positiveOnly.length);
+                positiveOnly_new[positiveOnly.length] = a;
+                positiveOnly = positiveOnly_new;
+            }
+        }
+        return positiveOnly;
     }
 
     /**

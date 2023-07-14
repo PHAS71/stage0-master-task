@@ -1,7 +1,10 @@
+package com.epam.conditions;
+
 public class IntegerDivider {
+
     public void printCompletelyDivided(int dividend, int divider) {
-        if (dividend == 0)
-            System.out.print("division by zero");
+        if (divider == 0)
+            System.out.print("division by zero\n");
         else {
             int result = dividend / divider;
             if (result * divider == dividend)
@@ -10,8 +13,5 @@ public class IntegerDivider {
                 System.out.print("cannot be divided completely\n");
         }
     }
-    public static void main(String[] args){
-        new IntegerDivider().printCompletelyDivided(12, 3);
-        new IntegerDivider().printCompletelyDivided(7, 2);
-    }
+
 }
